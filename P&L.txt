@@ -1,0 +1,28 @@
+user_amt = total assets of the account
+user_enableAmt = Availble funds in shanghai and shenzhen
+
+
+currentprice from sina
+subprice = nowprice - buyprice
+p&l =subprice *ordernum
+
+buyshort >> p&l negative
+
+total_fee = order_fee+order_spread+order_stayfee
+position_profit = p&l - total_fee
+a29.3*ll_p&l = all_p&l + position_profit
+
+
+buy_amt = 29.3 * 25000 = 732,500 (now_price * buyNum)
+
+if(siteSpread !=null){
+spread_rate_amt =  732,500 * 1.11 = 813,075
+}
+else{
+spread_rate_amt = 0;
+}
+
+BigDecimal all_profit_and_lose = profit_and_lose.subtract(buy_fee_amt).subtract(buy_yhs_amt).subtract(spread_rate_amt);
+
+all_p&l = p&l -handling_fee - buy_yhs_amt- spread_rate_amt
+
